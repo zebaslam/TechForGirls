@@ -12,7 +12,7 @@ function checkWinner() {
 
     if (buttonTexts[0] == buttonTexts[1] && buttonTexts[1] == buttonTexts[2] && buttonTexts[0] != '+') {
         return buttonTexts[0]
-    } else if (buttonTexts[3] == buttonTexts[4] && buttonTexts[4] == buttonTexts[5] && buttonTexts[0] != '+') {
+    } else if (buttonTexts[3] == buttonTexts[4] && buttonTexts[4] == buttonTexts[5] && buttonTexts[3] != '+') {
         return buttonTexts[3]
     } else if (buttonTexts[6] == buttonTexts[7] && buttonTexts[7] == buttonTexts[8] && buttonTexts[6] != '+') {
         return buttonTexts[6]
