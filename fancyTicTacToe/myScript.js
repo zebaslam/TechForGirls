@@ -10,7 +10,7 @@ function checkWinner() {
 
     if (elements[0] == elements[1] && elements[1] == elements[2] && elements[0] != '') {
         return elements[0]
-    } else if (elements[3] == elements[4] && elements[4] == elements[5] && elements[0] != '') {
+    } else if (elements[3] == elements[4] && elements[4] == elements[5] && elements[3] != '') {
         return elements[3]
     } else if (elements[6] == elements[7] && elements[7] == elements[8] && elements[6] != '') {
         return elements[6]
