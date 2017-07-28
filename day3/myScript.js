@@ -23,7 +23,7 @@ function checkWinner(){
     //***Day 3 code start***//
     if(buttonText0 == buttonText1 &&  buttonText1 == buttonText2&&buttonText0!='+'){
         return buttonText0
-    }else if(buttonText3 == buttonText4&& buttonText4 == buttonText5&&buttonText0!='+'){ 
+    }else if(buttonText3 == buttonText4&& buttonText4 == buttonText5&&buttonText3!='+'){ 
         return buttonText3
     }else if(buttonText6 == buttonText7&& buttonText7 == buttonText8&&buttonText6!='+'){
         return buttonText6
