@@ -9,21 +9,21 @@ function checkWinner() {
     }
 
     if (elements[0] == elements[1] && elements[1] == elements[2] && elements[0] != '') {
-        return elements[0]
+        return [0, 1, 2];
     } else if (elements[3] == elements[4] && elements[4] == elements[5] && elements[3] != '') {
-        return elements[3]
+        return [3, 4, 5];
     } else if (elements[6] == elements[7] && elements[7] == elements[8] && elements[6] != '') {
-        return elements[6]
+        return [6, 7, 8];
     } else if (elements[0] == elements[3] && elements[3] == elements[6] && elements[0] != '') {
-        return elements[0]
+        return [0, 3, 6];
     } else if (elements[1] == elements[4] && elements[4] == elements[7] && elements[1] != '') {
-        return elements[1]
+        return [1, 4, 7];
     } else if (elements[2] == elements[5] && elements[5] == elements[8] && elements[2] != '') {
-        return elements[2]
+        return [2, 5, 8];
     } else if (elements[0] == elements[4] && elements[4] == elements[8] && elements[0] != '') {
-        return elements[0]
+        return [0, 4, 8];
     } else if (elements[2] == elements[4] && elements[4] == elements[6] && elements[2] != '') {
-        return elements[2]
+        return [2, 4, 6];
     } else {
         return
     }
@@ -44,15 +44,19 @@ function myFunction(elementId) {
     isOTurn = !isOTurn;
 
     var winner = checkWinner();
-    if (winner == 'O') {
+    if (winner && document.getElementById(winner[0]).innerHTML== 'O') {
         setTimeout(function () {
-            alert("O wins");
+            for(var i = 0; i< winner.length; i++){
+                 document.getElementById(winner[i]).classList.add('blink_me');
+            }
         }, 100);
         document.getElementById('o-win-times').innerHTML++;
         gameOver = true;
-    } else if (winner == 'X') {
+    } else if (winner && document.getElementById(winner[0]).innerHTML == 'X') {
         setTimeout(function () {
-            alert("X wins");
+            for(var i = 0; i< winner.length; i++){
+                document.getElementById(winner[i]).classList.add('blink_me');
+            }
         }, 100);
         document.getElementById('x-win-times').innerHTML++;
         gameOver = true;
@@ -64,6 +68,7 @@ function myFunction(elementId) {
 function resetGame() {
     for (var i = 0; i < 9; i++) {
         document.getElementById(i).innerHTML = "";
+        document.getElementById(i).classList.remove('blink_me');
     }
     isOTurn = true;
     gameOver = false;
