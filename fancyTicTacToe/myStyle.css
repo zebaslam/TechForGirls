@@ -144,8 +144,9 @@ em {
 }
 
 .cell.blink_me{
-   font-size: 50px;
-   color: rgba(198,184,254,1);
+   font-size: 65px;
+   font-weight: bold;
+   color: aliceblue;
    -webkit-animation: glowing 1500ms infinite;
    -moz-animation: glowing 1500ms infinite;
    -o-animation: glowing 1500ms infinite;
