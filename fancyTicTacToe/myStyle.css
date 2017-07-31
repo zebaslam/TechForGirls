@@ -125,3 +125,29 @@ em {
 	align-items: center;
 	flex-direction: column;
 }
+@-moz-keyframes glowing {
+  0% { background-color: rgba(255,255,255,.2); -moz-box-shadow: 0 0 3px rgba(255,255,255,.2); }
+  50% { background-color: rgba(255,255,255,.1); -moz-box-shadow: 0 0 40px rgba(255,255,255,.1); }
+  100% { background-color: rgba(255,255,255,.01); -moz-box-shadow: 0 0 3px rgba(255,255,255,.01); }
+}
+
+@-o-keyframes glowing {
+  0% { background-color: rgba(255,255,255,.2); box-shadow: 0 0 3px rgba(255,255,255,.2); }
+  50% { background-color: rgba(255,255,255,.1); box-shadow: 0 0 40px rgba(255,255,255,.1); }
+  100% { background-color: rgba(255,255,255,.01); box-shadow: 0 0 3px rgba(255,255,255,.01); }
+}
+
+@keyframes glowing {
+  0% { background-color: rgba(255,255,255,.2); box-shadow: 0 0 3px rgba(255,255,255,.2); }
+  50% { background-color: rgba(255,255,255,.1); box-shadow: 0 0 40px rgba(255,255,255,.1); }
+  100% { background-color: rgba(255,255,255,.01); box-shadow: 0 0 3px rgba(255,255,255,.01); }
+}
+
+.cell.blink_me{
+   font-size: 50px;
+   color: rgba(198,184,254,1);
+   -webkit-animation: glowing 1500ms infinite;
+   -moz-animation: glowing 1500ms infinite;
+   -o-animation: glowing 1500ms infinite;
+   animation: glowing 1500ms infinite;
+}
